@@ -14,7 +14,8 @@ public class Resources {
 	public static final String RES_PATH = "de/amonbenson/ben/res/";
 
 	// Images
-	public static Image IMG_TEST_BOX;
+	public static Image IMG_PLAYER_BEN;
+	public static Image IMG_FLOOR;
 
 	// Sounds
 
@@ -37,7 +38,8 @@ public class Resources {
 		long startTime = System.currentTimeMillis();
 
 		// Load all
-		IMG_TEST_BOX = loadImage("testbox.png");
+		IMG_PLAYER_BEN = loadImage("player_ben.png");
+		IMG_FLOOR = loadImage("floor.png");
 
 		// Finish initialization
 		initialized = true;

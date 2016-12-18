@@ -6,6 +6,7 @@ import java.awt.Toolkit;
 import org.lwjgl.LWJGLException;
 import org.newdawn.slick.AppGameContainer;
 import org.newdawn.slick.GameContainer;
+import org.newdawn.slick.Input;
 import org.newdawn.slick.ScalableGame;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.state.StateBasedGame;
@@ -20,6 +21,8 @@ public class BenGame extends StateBasedGame {
 	
 	public static final int GAME_WIDTH = 3840, GAME_HEIGHT = 2160, FRAME_RATE = 120;
 	public static final String GAME_NAME = "Bén";
+	
+	public static final int KEY_JUMP = Input.KEY_SPACE, KEY_LEFT = Input.KEY_A, KEY_RIGHT = Input.KEY_D;
 	
 	private static AppGameContainer appgc;
 	
@@ -39,7 +42,7 @@ public class BenGame extends StateBasedGame {
 			appgc = new AppGameContainer(new ScalableGame(new BenGame(), GAME_WIDTH, GAME_HEIGHT));
 			Dimension screen = Toolkit.getDefaultToolkit().getScreenSize();
 			appgc.setDisplayMode(screen.width, screen.height, true);
-			//appgc.setMouseGrabbed(true);
+			appgc.setMouseGrabbed(true);
 			appgc.setTargetFrameRate(FRAME_RATE);
 			appgc.setShowFPS(true);
 			appgc.start();

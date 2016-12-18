@@ -24,6 +24,14 @@ public abstract class GameBody extends Body implements Updatable {
 		g.rotate(0, 0, (float) Math.toDegrees(getTransform().getRotation()));
 	}
 	
+	public double getX() {
+		return getTransform().getTranslationX();
+	}
+	
+	public double getY() {
+		return getTransform().getTranslationY();
+	}
+	
 	public void popTransform(Graphics g) {
 		g.popTransform();
 	}

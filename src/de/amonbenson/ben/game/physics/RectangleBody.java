@@ -9,7 +9,7 @@ import org.newdawn.slick.state.StateBasedGame;
 import de.amonbenson.ben.game.Updatable;
 import de.amonbenson.ben.res.Tools;
 
-public class RectangleBody extends GameBody implements Updatable {
+public abstract class RectangleBody extends GameBody {
 
 	private Polygon polygon;
 	private double w, h;
@@ -30,7 +30,7 @@ public class RectangleBody extends GameBody implements Updatable {
 		vertices[3] = new Vector2(0, h);
 		polygon = new org.dyn4j.geometry.Polygon(vertices);
 		addFixture(polygon);
-
+		
 		// Init body
 		setMass(MassType.NORMAL);
 		translate(x, y);
@@ -42,10 +42,5 @@ public class RectangleBody extends GameBody implements Updatable {
 
 	public double getHeight() {
 		return h;
-	}
-
-	@Override
-	public void update(GameWorld world, GameContainer gc, StateBasedGame game, int delta) {
-		
 	}
 }
